@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TokoBuku" default="default" basedir=".">
+    <description>Aplikasi Toko Buku - Manajemen Data Buku</description>
+    <import file="nbproject/build-impl.xml"/>
+</project>

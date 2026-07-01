@@ -1,0 +1,53 @@
+=========================================================
+  APLIKASI TOKO BUKU - PANDUAN CEPAT
+=========================================================
+
+ISI FOLDER INI:
+- src/tokobuku/          -> 5 file kode Java (Koneksi, FormLogin, FormUtama, FormBuku, Main)
+- database_toko_buku.sql -> script untuk membuat database
+- lib/                   -> taruh file driver MySQL (mysql-connector-j-x.x.x.jar) di sini
+- nbproject/             -> file konfigurasi project NetBeans (jangan diubah)
+
+LANGKAH MENJALANKAN:
+
+1. Nyalakan Apache & MySQL di XAMPP Control Panel.
+
+2. Buka http://localhost/phpmyadmin di browser,
+   klik tab SQL, buka file database_toko_buku.sql
+   dengan Notepad, copy semua isinya, paste ke kotak SQL,
+   lalu klik Go. Pastikan database "db_toko_buku" muncul
+   di sidebar kiri phpMyAdmin.
+
+3. Download driver MySQL Connector/J dari:
+   https://dev.mysql.com/downloads/connector/j/
+   Pilih "Platform Independent" -> download ZIP ->
+   ekstrak -> cari file mysql-connector-j-x.x.x.jar ->
+   taruh file jar itu ke dalam folder lib/ project ini.
+
+4. Buka NetBeans -> File -> Open Project -> pilih folder
+   TokoBuku ini -> Open.
+
+5. Klik kanan project TokoBuku -> Properties -> Libraries
+   -> Add JAR/Folder -> pilih file jar di folder lib/ -> OK.
+
+6. Klik kanan project -> Clean and Build.
+
+7. Tekan F6 (atau klik kanan project -> Run).
+
+8. Login dengan:
+   Username : admin
+   Password : admin123
+
+CARA PAKAI APLIKASI:
+- Klik tombol "DATA BUKU" di menu utama
+- Isi Judul, Pengarang, Harga (angka saja, contoh: 85000),
+  dan Stok, lalu klik Simpan
+- Klik salah satu baris di tabel untuk edit/hapus data
+- Gunakan kotak Cari untuk mencari buku berdasarkan
+  judul atau nama pengarang
+
+TROUBLESHOOTING:
+- "Driver tidak ditemukan": tambahkan jar ke Libraries (langkah 5)
+- "Gagal terhubung": pastikan MySQL di XAMPP sudah Running
+  dan database db_toko_buku sudah dibuat (langkah 2)
+- Error harga/stok: pastikan isi angka saja (tanpa Rp, titik, koma)
